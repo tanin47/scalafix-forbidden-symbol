@@ -7,7 +7,7 @@ The Scalafix rule for forbidding specified packages, classes, methods, and enums
 
 In fact, it works with any symbol that is not a literal.
 
-This was originally built as a part of [PlayFast](https://github.com/tanin47/playfast), an opinionated production-ready PlayFramework template that makes you productive. It is used for forbidding `java.time.Instant` in favor of `framework.Instant` (our own Instant proxy implementation) because `java.time.Instant` isn't mockable in PlayFramework's test.
+This was originally built as a part of [PlayFast](https://github.com/tanin47/playfast), an opinionated production-ready PlayFramework template that makes you productive. It is used for forbidding `java.time.Instant` in favor of `framework.Instant` (our own Instant proxy implementation) because `java.time.Instant` is tricky to mock in PlayFramework's test due the multi-threaded nature of it.
 
 Please consider starring the repository if you use it. Thank you!
 
